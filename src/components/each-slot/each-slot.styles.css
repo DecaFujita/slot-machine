@@ -1,0 +1,8 @@
+.each-slot {
+    width: 100px;
+    background-color: white;
+    margin: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }

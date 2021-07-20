@@ -2,22 +2,3 @@
   text-align: center;
 
 }
-
-.slots {
-  margin: auto;
-  display: flex;
-  justify-content: center;
-  height: 100px;
-  background-color: red;
-  margin: 20px;
-  margin-bottom: 0;
-}
-
-.each-slot {
-  width: 100px;
-  background-color: blue;
-  margin: 5px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
