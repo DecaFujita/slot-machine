@@ -12,7 +12,8 @@ class EachMachine extends React.Component {
         this.state = {
             num1: '',
             num2: '',
-            num3: ''
+            num3: '',
+            message: 'Good Luck!'
           }
     }
 
@@ -21,18 +22,26 @@ class EachMachine extends React.Component {
             num1: Math.floor(Math.random() * 9),
             num2: Math.floor(Math.random() * 9),
             num3: Math.floor(Math.random() * 9),
-        })
-    }
+        }, () => {
+            if (this.state.num1 === this.state.num2 && this.state.num1 === this.state.num3) {
+                this.setState({
+                    message: 'YOU WON!!!'
+                })
+            } else {
+                this.setState({
+                    message: 'Sorry! Better luck next time'
+                }) 
+            }
+        }
+    )}
 
     render() {
-        const { key } = this.state;
-        console.log ({key})
         return(
             <div className='each-machine'>
                 <div className='header'>
                     <h1 className='title'>{this.props.title}</h1>
                     <Button
-                        onClick={this.runSlot}
+                        action={this.runSlot}
                         btnText='Go!'
                     />
                 </div>
@@ -42,7 +51,7 @@ class EachMachine extends React.Component {
                     <EachSlot key={2} num={this.state.num2}/>
                     <EachSlot key={3} num={this.state.num3}/>
                 </div>
-                <p>message</p>
+                <p className='message'>{this.state.message}</p>
             </div>
         )
     }

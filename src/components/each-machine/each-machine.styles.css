@@ -1,13 +1,15 @@
 .each-machine {
     background-color: goldenrod;
-    margin: 10px;
-    padding: 0 5px
+    margin: 20px auto;
+    /* padding: 0 5px; */
+    width: 400px;
+    border-radius: 10px;
 }
 
 .header {
     display: flex;
     justify-content: space-between;
-    margin: 0px 20px;
+    margin: 0px 40px;
     align-items: center;
     color: white;
 }
@@ -16,7 +18,12 @@
     margin: auto;
     display: flex;
     justify-content: center;
-    height: 100px;
+    height: 110px;
     margin-bottom: 0;
   }
   
+.message {
+    margin-top: 5px;
+    padding-bottom: 10px;
+    color: white;
+}

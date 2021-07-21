@@ -7,9 +7,9 @@ import './App.css';
 function App() {
   return (
     <div className="App">
-      <EachMachine key={1} title='1' />
-      <EachMachine key={2} />
-      <EachMachine key={3} />
+      <EachMachine key={1} title='1st Try' />
+      <EachMachine key={2} title='2nd Try' />
+      <EachMachine key={3} title='Last Try' />
     </div>
   );
 }
